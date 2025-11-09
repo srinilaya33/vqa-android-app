@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VQA App</string>
+    <string name="captured_image_preview">Captured image preview</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="enter_question">Enter your question...</string>
+    <string name="ask_by_voice">Ask by Voice</string>
+    <string name="get_answer">Get Answer</string>
+    <string name="initial_message">Take a picture and ask a question to get started!</string>
+</resources>

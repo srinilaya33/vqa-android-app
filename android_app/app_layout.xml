@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Camera Preview / Captured Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#f0f0f0"
+        android:scaleType="centerCrop" />
+
+    <!-- Take Picture Button -->
+    <Button
+        android:id="@+id/btnCapture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Picture"
+        android:layout_marginTop="16dp" />
+
+    <!-- Question Input -->
+    <EditText
+        android:id="@+id/etQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter your question..." />
+
+    <!-- Voice Input Button -->
+    <Button
+        android:id="@+id/btnVoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ask by Voice" />
+
+    <!-- Get Answer Button -->
+    <Button
+        android:id="@+id/btnAsk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Get Answer" />
+
+    <!-- Answer Display -->
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Answer will appear here"
+        android:textSize="18sp"
+        android:background="#fff9c4"
+        android:padding="16dp" />
+
+</LinearLayout>

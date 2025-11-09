@@ -1,0 +1,6 @@
+- Android Studio with Kotlin support
+- Camera permission
+- Internet permission  
+- Retrofit for API calls
+- Text-to-Speech
+- Speech-to-Text
