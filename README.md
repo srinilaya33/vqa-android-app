@@ -1,4 +1,4 @@
-# Visual Question Answering Android App
+## Visual Question Answering Android App
 
 <div align="center">
 
@@ -9,122 +9,126 @@
 
 **An intelligent Android app that answers questions about images using AI**
 
-[Features](#-features) • [Architecture](#-architecture) • [Setup](#-setup) 
+[Features](#-features) • [Architecture](#-architecture) • [Setup](#-quick-setup)
 
 </div>
 
-##  Features
+## Features
 
-- ** Camera Integration** - Capture images directly from the app
-- ** AI-Powered Answers** - Uses ViLT transformer model for VQA
-- ** Voice Input Ready** - Architecture prepared for speech recognition
-- ** Real-time Processing** - Fast API backend with async support
-- ** Native Android** - Built with Kotlin and modern Android SDK
+- **Camera Integration** – Capture images directly from the app  
+- **AI-Powered Answers** – Uses ViLT transformer model for VQA  
+- **Voice Input Ready** – Architecture prepared for speech recognition  
+- **Real-time Processing** – FastAPI backend with async support  
+- **Native Android** – Built with Kotlin and modern Android SDK  
 
 ## Architecture
+
+```
+
 Android App (Kotlin) → FastAPI Backend → ViLT Model → JSON Response
 ↓
 Camera Capture → Image Processing → Question → AI Answer
 
+````
 
 ## Prerequisites
 
-- Python 3.8+
-- Android Studio
-- OnePlus Nord 5G (or any Android device)
-- WiFi network
+- Python **3.8+**  
+- Android Studio  
+- OnePlus Nord 5G (or any Android device)  
+- Wi-Fi network  
+
 
 ## Quick Setup
 
-### Backend Setup
+### 🔹 Backend Setup
+
 ```bash
 cd backend
 pip install -r requirements.txt
 python main.py
+````
 
-Android Setup
+### 🔹 Android Setup
 
-    Open android_app in Android Studio
+1. Open `android_app` in **Android Studio**
+2. Build and run on a connected Android device
+3. Update the IP address in `MainActivity.kt` with your **computer’s IP**
 
-    Build and run on connected device
-
-    Update IP in MainActivity.kt with your computer's IP
 
 ## Technical Stack
+
 ### Backend
 
-    FastAPI - Modern Python web framework
+* **FastAPI** – Modern Python web framework
+* **PyTorch** – Deep learning framework
+* **Transformers** – Hugging Face AI models
+* **ViLT** – Vision-and-Language Transformer model
 
-    PyTorch - Deep learning framework
+### Android
 
-    Transformers - Hugging Face AI models
+* **Kotlin** – Official Android language
+* **CameraX** – Modern camera API
+* **HTTPURLConnection** – Network requests
+* **Material Design** – Modern UI components
 
-    ViLT - Vision-and-Language Transformer model
-
-###Android
-
-    Kotlin - Official Android language
-
-    CameraX - Modern camera API
-
-    HTTPURLConnection - Network requests
-
-    Material Design - Modern UI components
 
 ## Usage
 
-    Launch the Android app
+1. Launch the **Android app**
+2. Capture an image using the camera
+3. Enter your question about the image
+4. Get an instant AI-powered answer
 
-    Capture an image using the camera
+## Example Questions
 
-    Enter your question about the image
+* “What color is the object?”
+* “Is there a person in the image?”
+* “How many objects are there?”
 
-    Get instant AI-powered answer
-
-## Example questions:
-
-    "What color is the object?"
-
-    "Is there a person in the image?"
-
-    "What is the main subject?"
-
-    "How many objects are there?"
 
 ## API Endpoints
-POST /answer
-json
 
-Request:
+### **POST** `/answer`
+
+#### Request
+
+```json
 {
-  "image": File (JPEG/PNG),
+  "image": "File (JPEG/PNG)",
   "question": "What is in this image?"
 }
+```
 
-Response:
+#### Response
+
+```json
 {
   "answer": "a cat",
   "status": "success",
   "question": "What is in this image?"
 }
+```
 
 ## Model Performance
 
-    Model: dandelin/vilt-b32-finetuned-vqa
+| Metric       | Details                         |
+| ------------ | ------------------------------- |
+| **Model**    | dandelin/vilt-b32-finetuned-vqa |
+| **Training** | Fine-tuned on VQAv2 dataset     |
+| **Accuracy** | ~70% on VQAv2 validation        |
+| **Speed**    | ~1–2 seconds per inference      |
 
-    Training: Fine-tuned on VQAv2 dataset
 
-    Accuracy: ~70% on VQAv2 validation
-
-    Speed: ~1-2 seconds per inference
 ## Future Enhancements
 
-    Voice question input
+* Voice question input
+* Multiple image support
+* Answer confidence scores
+* Offline mode capability
+* Image gallery integration
 
-    Multiple image support
 
-    Answer confidence scores
-
-    Offline mode capability
-
-    Image gallery integration
+<div align="center">
+    
+</div>
